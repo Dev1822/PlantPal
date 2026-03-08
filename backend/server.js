@@ -12,7 +12,12 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
-app.use(cors({ origin: '*' }));
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://plant-pal-ten.vercel.app'
+  ]
+}));
 app.use(express.json());
 
 // Request logger in development
