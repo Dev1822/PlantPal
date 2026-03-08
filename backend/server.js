@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3001;
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
   origin: [
-    'https://plantpal-s48m.onrender.com/' 
+    'https://plantpal-liart.vercel.app/' 
   ]
 }));
 app.use(express.json());
