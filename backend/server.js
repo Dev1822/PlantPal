@@ -12,16 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
-app.use(cors({
-  origin: [
-    'https://plantpal-liart.vercel.app',
-    'http://localhost:5173'
-  ],
-  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization']
-}));
-
-app.options('*', cors()); // allow preflight requests
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 // Request logger in development
